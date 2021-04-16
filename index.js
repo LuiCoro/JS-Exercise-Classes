@@ -61,9 +61,6 @@ class Person {
 }
 const lui = new Person('Lui', 23);
 
-console.log(lui.name, lui.age);
-lui.toSting();
-
 /*
   TASK 2
     - Write a Car class whose constructor initializes `model` and `milesPerGallon` from arguments.
@@ -107,13 +104,13 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-  constructor(name) {
-    this.name = name;
+  constructor(name, age, location) {
+    this.name = "Petar";
     this.age = 23;
-    this.location = 'California';
+    this.location = 'NY City';
   }
   speak() {
-    return `Hello my name is ${this.name}, I am from ${this.location}`
+    console.log(`Hello my name is ${this.name}, I am from ${this.location}`)
   }
 }
 
