@@ -56,9 +56,13 @@ class Person {
     this.stomach = [];
   }
   toSting() {
-    return `${this.name} and ${this.age}`
+    return `${this.name}, ${this.age}`
   }
 }
+const lui = new Person('Lui', 23);
+
+console.log(lui.name, lui.age);
+lui.toSting();
 
 /*
   TASK 2
@@ -85,9 +89,8 @@ class Car {
     this.tank += gallons;
   }
   drive(distance) {
-    this.distance += this.odometer;
-    this.tank -= this.milesPerGallon;
-    return `I ran out of fuel at ${this.odometer} miles!`
+    this.odometer += distance;
+    this.tank = this.milesPerGallon - this.gallons;
   }
 }
 
@@ -104,8 +107,8 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-  constructor() {
-    this.name = 'Luis';
+  constructor(name) {
+    this.name = name;
     this.age = 23;
     this.location = 'California';
   }
